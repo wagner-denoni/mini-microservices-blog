@@ -55,7 +55,7 @@ app.post('/events', async (req, res) => {
         if (commentIndex !== -1) {
           comments[commentIndex].status = status;
 
-          await axios.post('http://localhost:4005/events', {
+          await axios.post('http://event-bus-clusterip-srv:4005/events', {
             type: 'CommentUpdated',
             data: comments[commentIndex]
           });
