@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: posts
+spec:
+  container:
+    - name: posts
+      image: wagnerdenoni/blog-posts-ms:0.0.1
+
+# To execute run: kubectl apply -f posts.yaml
